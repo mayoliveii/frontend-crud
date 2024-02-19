@@ -3,6 +3,8 @@ import { TableContainer, TableHeader, TableCell, EditButton, EditUserIcon, Delet
 import EditUserModal from '../../modals/EditUserModal/EditUserModal';
 import apiService from '../../apiServices/apiService';
 import ConfirmDeleteModal from '../../modals/ConfirmDeleteModal/ConfirmDeleteModal';
+import { formatDate } from '../../helpers/date.ts';
+import { formatPhone } from '../../helpers/phone.ts';
 
 export interface User {
   id: string;
@@ -100,10 +102,10 @@ function UsersTable({
             <TableCell>{user.id}</TableCell>
             <TableCell>{user.name}</TableCell>
             <TableCell>{user.email}</TableCell>
-            <TableCell>{user.phone}</TableCell>
-            <TableCell>{user.created_at}</TableCell>
-            <TableCell>{user.updated_at}</TableCell>
-            <TableCell>{user.deleted_at}</TableCell>
+            <TableCell>{formatPhone(user.phone)}</TableCell>
+            <TableCell>{formatDate(user.created_at)}</TableCell>
+            <TableCell>{formatDate(user.updated_at)}</TableCell>
+            <TableCell>{formatDate(user.deleted_at)}</TableCell>
             <TableCell>
               <EditButton onClick={() => handleEditClick(user)}>
                 <EditUserIcon />
