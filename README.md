@@ -63,6 +63,10 @@ Open the browser and navigate to:
 http://localhost:5173/
 ```
 
+## Deploy on Vercel
+This project can also be accessed through the Vercel deployment at:
+> https://frontend-crud-nu.vercel.app/.
+
 ## Backend Integration
 - The application communicates with a [backend](https://github.com/mayoliveii/backend-crud) to perform user-related operations.
 - Backend endpoints handle user creation, retrieval, updating, and deletion.
